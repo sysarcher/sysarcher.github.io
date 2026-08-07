@@ -1,0 +1,113 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "schema-version": "1.14.0",
+    "install": {
+      "gh": {
+        "pkg-path": "gh"
+      },
+      "hugo": {
+        "pkg-path": "hugo"
+      },
+      "opencode": {
+        "pkg-path": "opencode"
+      }
+    },
+    "hook": {},
+    "profile": {},
+    "options": {
+      "systems": [
+        "x86_64-linux"
+      ]
+    }
+  },
+  "packages": [
+    {
+      "attr_path": "gh",
+      "broken": false,
+      "derivation": "/nix/store/y0knr1x28nbrw09l9z3wylcifv1dpb5z-gh-2.97.0.drv",
+      "description": "GitHub CLI tool",
+      "install_id": "gh",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+      "name": "gh-2.97.0",
+      "pname": "gh",
+      "rev": "e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+      "rev_count": 1047536,
+      "rev_date": "2026-08-04T07:31:08Z",
+      "scrape_date": "2026-08-05T05:57:02.848513Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.97.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/7ayrbzjnm88xn12lfv99c1sqprlc2bwr-gh-2.97.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "hugo",
+      "broken": false,
+      "derivation": "/nix/store/sy16rhs7rjk5vgd17m9kyksx8bf07xf9-hugo-0.164.0.drv",
+      "description": "Fast and modern static website engine",
+      "install_id": "hugo",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+      "name": "hugo-0.164.0",
+      "pname": "hugo",
+      "rev": "e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+      "rev_count": 1047536,
+      "rev_date": "2026-08-04T07:31:08Z",
+      "scrape_date": "2026-08-05T05:57:21.940042Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.164.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ph9s5glvc25876f4zl6c92dplwzacs72-hugo-0.164.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "opencode",
+      "broken": false,
+      "derivation": "/nix/store/3grr4nr5gm3wcj1h8qasykd3xcr6wpwp-opencode-1.18.11.drv",
+      "description": "AI coding agent built for the terminal",
+      "install_id": "opencode",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+      "name": "opencode-1.18.11",
+      "pname": "opencode",
+      "rev": "e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+      "rev_count": 1047536,
+      "rev_date": "2026-08-04T07:31:08Z",
+      "scrape_date": "2026-08-05T05:57:48.277112Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.18.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/spgky8n4qc6v28n6z2sp0sdllcg132g3-opencode-1.18.11"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}

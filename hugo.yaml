@@ -1,0 +1,59 @@
+baseURL: "https://sysarcher.github.io/"
+locale: "en-us"
+title: "sysarcher/@ich_code"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+enableEmoji: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  env: production
+  description: "Finally, I've joined the ranks of hipsters and created a github page that I'll use to rant. A lot. I might also write something useful."
+  # papermod
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowToc: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowShareButtons: true
+  ShowFullTextinRSS: true
+  homeInfoParams:
+    Title: "Hi, I'm sysarcher"
+    Content: "Finally, I've joined the ranks of hipsters and created a github page that I'll use to rant. A lot. I might also write something useful."
+  socialIcons:
+    - name: github
+      title: GitHub
+      url: "https://github.com/sysarcher"
+    - name: twitter
+      title: Twitter
+      url: "https://twitter.com/ich_code"
+  editPost:
+    URL: ""
+    Text: "Suggest Changes"
+    appendFilePath: false
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+menu:
+  main:
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 5
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
