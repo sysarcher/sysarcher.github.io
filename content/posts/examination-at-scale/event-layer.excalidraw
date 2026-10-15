@@ -1,0 +1,168 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "type": "text",
+      "id": "h",
+      "x": 100,
+      "y": 60,
+      "text": "3 · The downstream event layer",
+      "fontSize": 32,
+      "fontFamily": 5,
+      "width": 595.2,
+      "height": 40
+    },
+    {
+      "type": "text",
+      "id": "wf",
+      "x": 300,
+      "y": 180,
+      "text": "worker finalize",
+      "fontSize": 24,
+      "fontFamily": 5,
+      "width": 223.2,
+      "height": 30
+    },
+    {
+      "type": "arrow",
+      "id": "a1",
+      "x": 397,
+      "y": 215,
+      "width": 0,
+      "height": 55,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          55
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "log",
+      "x": 310,
+      "y": 280,
+      "text": "append-only log",
+      "fontSize": 24,
+      "fontFamily": 5,
+      "width": 223.2,
+      "height": 30
+    },
+    {
+      "type": "text",
+      "id": "lognote",
+      "x": 310,
+      "y": 318,
+      "text": "sequence + version · committed with the write",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "width": 446.4,
+      "height": 20
+    },
+    {
+      "type": "arrow",
+      "id": "a2",
+      "x": 397,
+      "y": 355,
+      "width": 0,
+      "height": 50,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          50
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "disp",
+      "x": 170,
+      "y": 415,
+      "text": "dispatch — at-least-once, in order per consumer",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 641.08,
+      "height": 27.5
+    },
+    {
+      "type": "text",
+      "id": "mech",
+      "x": 300,
+      "y": 458,
+      "text": "inline drain · read-your-writes\npoller · every 3 s\nredis nudge · best effort",
+      "fontSize": 18,
+      "fontFamily": 5,
+      "width": 345.96,
+      "height": 67.5
+    },
+    {
+      "type": "arrow",
+      "id": "a3",
+      "x": 397,
+      "y": 545,
+      "width": 0,
+      "height": 50,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          50
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "cons",
+      "x": 310,
+      "y": 605,
+      "text": "idempotent consumers",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 272.8,
+      "height": 27.5
+    },
+    {
+      "type": "text",
+      "id": "consnote",
+      "x": 100,
+      "y": 648,
+      "text": "grade projection · analytics outbox + sweeper · notifications · last-update banner",
+      "fontSize": 18,
+      "fontFamily": 5,
+      "width": 915.12,
+      "height": 22.5
+    },
+    {
+      "type": "text",
+      "id": "foot",
+      "x": 100,
+      "y": 720,
+      "text": "redelivery is normal — replaying any stretch of the log reproduces the same state",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "width": 803.52,
+      "height": 20
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

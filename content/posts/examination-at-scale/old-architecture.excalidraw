@@ -1,0 +1,236 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "type": "text",
+      "id": "h",
+      "x": 100,
+      "y": 60,
+      "text": "1 · The old architecture",
+      "fontSize": 32,
+      "fontFamily": 5,
+      "width": 476.15999999999997,
+      "height": 40
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "x": 100,
+      "y": 200,
+      "text": "submit",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 81.84,
+      "height": 27.5
+    },
+    {
+      "type": "arrow",
+      "id": "a1",
+      "x": 190,
+      "y": 212,
+      "width": 130,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          130,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "ws",
+      "x": 330,
+      "y": 200,
+      "text": "write service",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 177.32,
+      "height": 27.5
+    },
+    {
+      "type": "arrow",
+      "id": "a2",
+      "x": 510,
+      "y": 205,
+      "width": 140,
+      "height": -60,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          140,
+          -60
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 660,
+      "y": 130,
+      "text": "notifications — direct call",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 334.8,
+      "height": 25
+    },
+    {
+      "type": "arrow",
+      "id": "a3",
+      "x": 510,
+      "y": 212,
+      "width": 140,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          140,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "n2",
+      "x": 660,
+      "y": 200,
+      "text": "analytics — direct call",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 285.2,
+      "height": 25
+    },
+    {
+      "type": "arrow",
+      "id": "a4",
+      "x": 510,
+      "y": 219,
+      "width": 140,
+      "height": 51,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          140,
+          51
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "n3",
+      "x": 660,
+      "y": 270,
+      "text": "reporting recalc — inside the transaction",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 508.4,
+      "height": 25
+    },
+    {
+      "type": "text",
+      "id": "reads",
+      "x": 100,
+      "y": 400,
+      "text": "reads",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 62,
+      "height": 25
+    },
+    {
+      "type": "arrow",
+      "id": "a5",
+      "x": 210,
+      "y": 412,
+      "width": -38,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -38,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "snap",
+      "x": 225,
+      "y": 400,
+      "text": "gradebook snapshots — embedded submissions, read across contexts",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 793.6,
+      "height": 25
+    },
+    {
+      "type": "text",
+      "id": "cq",
+      "x": 100,
+      "y": 490,
+      "text": "cache + queue",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 161.2,
+      "height": 25
+    },
+    {
+      "type": "arrow",
+      "id": "a6",
+      "x": 270,
+      "y": 502,
+      "width": 120,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "redis",
+      "x": 400,
+      "y": 490,
+      "text": "one shared Redis — no AOF, no explicit no-eviction",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 620,
+      "height": 25
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

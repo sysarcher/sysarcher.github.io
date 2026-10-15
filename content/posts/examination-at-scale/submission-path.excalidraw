@@ -1,0 +1,394 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "type": "text",
+      "id": "h",
+      "x": 100,
+      "y": 60,
+      "text": "2 · The submission path",
+      "fontSize": 32,
+      "fontFamily": 5,
+      "width": 456.32,
+      "height": 40
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "x": 100,
+      "y": 190,
+      "text": "submit",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 81.84,
+      "height": 27.5
+    },
+    {
+      "type": "arrow",
+      "id": "a1",
+      "x": 190,
+      "y": 202,
+      "width": 130,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          130,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "gate",
+      "x": 330,
+      "y": 178,
+      "text": "gate — contract checks only",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 368.28,
+      "height": 27.5
+    },
+    {
+      "type": "text",
+      "id": "gnote",
+      "x": 330,
+      "y": 216,
+      "text": "auth · rate limit · deadline · shape\nidempotency (final + pending) · attempts",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "width": 396.8,
+      "height": 40
+    },
+    {
+      "type": "arrow",
+      "id": "a2",
+      "x": 700,
+      "y": 202,
+      "width": 120,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          120,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "qd",
+      "x": 830,
+      "y": 190,
+      "text": "queue doc",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 122.76,
+      "height": 27.5
+    },
+    {
+      "type": "text",
+      "id": "qdnote",
+      "x": 830,
+      "y": 228,
+      "text": "majority write · unique attempt key\nserver-side enqueuedAt",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "width": 347.2,
+      "height": 40
+    },
+    {
+      "type": "arrow",
+      "id": "a3",
+      "x": 1010,
+      "y": 202,
+      "width": 100,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "ack",
+      "x": 1120,
+      "y": 190,
+      "text": "ACK",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 40.92,
+      "height": 27.5
+    },
+    {
+      "type": "text",
+      "id": "relaynote",
+      "x": 905,
+      "y": 298,
+      "text": "best-effort relay",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "width": 168.64,
+      "height": 20
+    },
+    {
+      "type": "arrow",
+      "id": "a4",
+      "x": 890,
+      "y": 275,
+      "width": 0,
+      "height": 70,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          70
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeStyle": "dashed"
+    },
+    {
+      "type": "text",
+      "id": "job",
+      "x": 740,
+      "y": 355,
+      "text": "queue job — carries only the doc id",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 434,
+      "height": 25
+    },
+    {
+      "type": "text",
+      "id": "budget",
+      "x": 100,
+      "y": 300,
+      "text": "budget: ~6 indexed reads · 1 majority write\n+ 1 best-effort enqueue — no transaction, no scans",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "width": 496,
+      "height": 40
+    },
+    {
+      "type": "arrow",
+      "id": "a5",
+      "x": 890,
+      "y": 422,
+      "width": 0,
+      "height": -25,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -25
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeStyle": "dashed"
+    },
+    {
+      "type": "text",
+      "id": "sw",
+      "x": 740,
+      "y": 430,
+      "text": "sweeper — reconciles pending docs ↔ jobs",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 496,
+      "height": 25
+    },
+    {
+      "type": "text",
+      "id": "wsub",
+      "x": 100,
+      "y": 560,
+      "text": "workers — every pod, competing consumers, bounded concurrency",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 832.04,
+      "height": 27.5
+    },
+    {
+      "type": "text",
+      "id": "claim",
+      "x": 100,
+      "y": 650,
+      "text": "claim queue doc",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 204.6,
+      "height": 27.5
+    },
+    {
+      "type": "arrow",
+      "id": "a6",
+      "x": 300,
+      "y": 662,
+      "width": 110,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "ident",
+      "x": 420,
+      "y": 650,
+      "text": "resolve identity · targeting",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 381.92,
+      "height": 27.5
+    },
+    {
+      "type": "arrow",
+      "id": "a7",
+      "x": 680,
+      "y": 662,
+      "width": 230,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          230,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "grade",
+      "x": 920,
+      "y": 650,
+      "text": "grade",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 68.2,
+      "height": 27.5
+    },
+    {
+      "type": "arrow",
+      "id": "a8",
+      "x": 990,
+      "y": 662,
+      "width": 150,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          150,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "fin",
+      "x": 1150,
+      "y": 638,
+      "text": "finalize transaction",
+      "fontSize": 22,
+      "fontFamily": 5,
+      "width": 272.8,
+      "height": 27.5
+    },
+    {
+      "type": "text",
+      "id": "finnote",
+      "x": 1150,
+      "y": 676,
+      "text": "submission + result event + recalc",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "width": 337.28,
+      "height": 20
+    },
+    {
+      "type": "arrow",
+      "id": "a9",
+      "x": 1300,
+      "y": 720,
+      "width": 0,
+      "height": 50,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          50
+        ]
+      ],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "sse",
+      "x": 1120,
+      "y": 780,
+      "text": "SSE finalize to the student",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "width": 334.8,
+      "height": 25
+    },
+    {
+      "type": "text",
+      "id": "foot",
+      "x": 100,
+      "y": 830,
+      "text": "transient errors retry with backoff · permanent failures → failed / DLQ",
+      "fontSize": 16,
+      "fontFamily": 5,
+      "width": 704.32,
+      "height": 20
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
