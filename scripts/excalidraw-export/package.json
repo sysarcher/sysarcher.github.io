@@ -1,0 +1,15 @@
+{
+  "name": "excalidraw-export",
+  "private": true,
+  "type": "module",
+  "description": "Headless .excalidraw -> .svg export using a real browser (fonts subsetted and embedded)",
+  "scripts": {
+    "export": "node export.mjs"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Excalidraw diagram MCP server (stdio transport).
+  // Image: https://github.com/sysarcher/excalidraw-mcp-docker
+  "mcp": {
+    "excalidraw": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "excalidraw-mcp-checkpoints:/tmp/excalidraw-mcp-checkpoints",
+        "ghcr.io/sysarcher/excalidraw-mcp-docker:latest",
+        "node",
+        "dist/index.js",
+        "--stdio"
+      ],
+      "enabled": true
+    }
+  }
+}

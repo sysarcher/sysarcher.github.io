@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>PENDING</title></head>
+<body>
+<script>
+  window.EXCALIDRAW_ASSET_PATH = "/";
+</script>
+<script type="module">
+  import "./entry.bundle.js";
+  try {
+    const scenes = await (await fetch("./scenes.json")).json();
+    const done = await window.runExports(scenes);
+    document.title = "DONE:" + done.join(",");
+    document.body.setAttribute("data-status", "ok");
+  } catch (e) {
+    document.title = "ERROR";
+    document.body.setAttribute("data-status", "error");
+    const pre = document.createElement("pre");
+    pre.textContent = String((e && e.stack) || e);
+    document.body.appendChild(pre);
+  }
+</script>
+</body>
+</html>
