@@ -25,28 +25,28 @@
     {
       "attr_path": "gh",
       "broken": false,
-      "derivation": "/nix/store/7xllfq7k6fbcb1pqmmjpb5kw24ngfgl6-gh-2.102.0.drv",
+      "derivation": "/nix/store/vjpz45dp51acbahazxd9gjn9ii3mdprr-gh-2.103.0.drv",
       "description": "GitHub CLI tool",
       "install_id": "gh",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=7fd4004d0511991fff3a0524856a9be09e28c5f0",
-      "name": "gh-2.102.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+      "name": "gh-2.103.0",
       "pname": "gh",
-      "rev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
-      "rev_count": 1090327,
-      "rev_date": "2026-10-11T15:54:36Z",
-      "scrape_date": "2026-10-13T06:09:56.997986Z",
+      "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+      "rev_count": 1100280,
+      "rev_date": "2026-10-23T16:35:39Z",
+      "scrape_date": "2026-10-25T07:01:24.201682Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
-      "version": "2.102.0",
+      "version": "2.103.0",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "debug": "/nix/store/3w63bbqd4nimmgqw5cqk7c40i9ijhihd-gh-2.102.0-debug",
-        "out": "/nix/store/x6kcq7g4cwysbwjiyz152rbl6fv7l55w-gh-2.102.0"
+        "debug": "/nix/store/fxk34y0gp815dpryax07qdx8s43ajxg3-gh-2.103.0-debug",
+        "out": "/nix/store/y7rnnq2qqi43sajrpc3yfqln3ivqgc9b-gh-2.103.0"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
@@ -55,27 +55,27 @@
     {
       "attr_path": "hugo",
       "broken": false,
-      "derivation": "/nix/store/2rcy1g6n5iyq00dmy59zmh6j3gbnzix1-hugo-0.167.0.drv",
+      "derivation": "/nix/store/kqfwls7hs0amk2jcpwcs1v4hfkjkjmcj-hugo-0.168.0.drv",
       "description": "Fast and modern static website engine",
       "install_id": "hugo",
       "license": "Apache-2.0",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=7fd4004d0511991fff3a0524856a9be09e28c5f0",
-      "name": "hugo-0.167.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+      "name": "hugo-0.168.0",
       "pname": "hugo",
-      "rev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
-      "rev_count": 1090327,
-      "rev_date": "2026-10-11T15:54:36Z",
-      "scrape_date": "2026-10-13T06:10:17.324331Z",
+      "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+      "rev_count": 1100280,
+      "rev_date": "2026-10-23T16:35:39Z",
+      "scrape_date": "2026-10-25T07:01:24.289383Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
-      "version": "0.167.0",
+      "version": "0.168.0",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/lnml5dwxxw5xnmz5ggp3cl1arnvq6kcm-hugo-0.167.0"
+        "out": "/nix/store/9lrdjq46l2daz0m9880ywxkdxmqdzi1r-hugo-0.168.0"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
@@ -84,27 +84,27 @@
     {
       "attr_path": "opencode",
       "broken": false,
-      "derivation": "/nix/store/bsaccvnk560kba7xwfyd3iza8cmbnsy1-opencode-1.19.0.drv",
+      "derivation": "/nix/store/sfaw75fghm606v7i2z7fsdl579s4wjay-opencode-2.1.1.drv",
       "description": "AI coding agent built for the terminal",
       "install_id": "opencode",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=7fd4004d0511991fff3a0524856a9be09e28c5f0",
-      "name": "opencode-1.19.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+      "name": "opencode-2.1.1",
       "pname": "opencode",
-      "rev": "7fd4004d0511991fff3a0524856a9be09e28c5f0",
-      "rev_count": 1090327,
-      "rev_date": "2026-10-11T15:54:36Z",
-      "scrape_date": "2026-10-13T06:10:43.004696Z",
+      "rev": "3ec636362e1816bc2f0888fa0fa2c69f1bc9e504",
+      "rev_count": 1100280,
+      "rev_date": "2026-10-23T16:35:39Z",
+      "scrape_date": "2026-10-25T07:01:24.403451Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
-      "version": "1.19.0",
+      "version": "2.1.1",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/0j2gmj4zx6xac1iipzy9m3ybh6wwkh6p-opencode-1.19.0"
+        "out": "/nix/store/aklj4winymg3qa8l048b8wkprlkf4683-opencode-2.1.1"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
