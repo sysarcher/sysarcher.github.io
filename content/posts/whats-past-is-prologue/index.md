@@ -6,7 +6,7 @@ categories: ["distributed-systems", "architecture", "event-driven"]
 
 *Retiring snapshot-per-write for an event-fed read model*
 
-**TL;DR**: Shakespeare succinctly describes what will follow but our history storage mechanism was worse than O(N) — we were writing a whole copy of everything at any change. We moved to using events and an event-driven architecture. This is very much appreciated by our DB. Event driven systems are an aggregation of the past — what's past, is prologue! (*The Tempest, ACT II*)
+**TL;DR**: Shakespeare succinctly describes what will follow, but our history storage mechanism was worse than O(N) — we were writing a whole copy of everything on every change. We moved to using events and an event-driven architecture. This is very much appreciated by our DB. Event-driven systems are an aggregation of the past — what's past, is prologue! (*The Tempest*, Act II)
 
 I discuss this topic very briefly here as well (2018 video): [https://youtu.be/-VJ6FtTS8zg](https://youtu.be/-VJ6FtTS8zg)
 
@@ -40,7 +40,7 @@ POST-WRITE SNAPSHOT
 └──────────────────────────────────────────────────────────────┘
 ```
 
-One teacher changing one mark produced one new document containing the whole class. A recalculation of a term produced one per course, per pass.
+One teacher changing one mark produced one new document containing the whole class. A recalculation of a term produced one snapshot per course, per pass.
 
 The design was not stupid. It bought three things cheaply:
 
@@ -48,7 +48,7 @@ The design was not stupid. It bought three things cheaply:
 2. **Decoupling.** Snapshot reads did not depend on the write schema evolving.
 3. **Reproducibility.** A generated report could cite the snapshot it was built from.
 
-It worked while the numbers were small. And it was probably fast to implement (though I would contest this fact).
+It worked while the numbers were small. And it was probably fast to implement (though I would contest the "fast" part).
 
 ### Where it breaks
 
@@ -69,15 +69,15 @@ dual truth
   the locked read path read the copy, not the source
 ```
 
-*\*period-locking is an internal concept we use for proxying data fidelity* — unnecessary for what follows.
+*\*period-locking is an internal concept we use for preserving data fidelity* — unnecessary for what follows.
 
 ## The measured cost
 
 ```text
-We decided to redact the numbers, but it was in 10s of GBs (not the low 10s either)
+We decided to redact the numbers, but it was in the tens of GBs (not the low tens either)
 ```
 
-At the current write rate, the design projected roughly 5x of additional snapshot storage per year, none of which was required to answer either of the two product questions. And this calculation is just based on user growth. Ideally, from a product perspective, we must encourage more people to use more of our features — but this was gonna kill us and our pockets.
+At the current write rate, the design projected roughly 5x additional snapshot storage per year, none of which was required to answer either of the two product questions. And this calculation is just based on user growth. Ideally, from a product perspective, we should encourage more people to use more of our features — but this was gonna kill us and our pockets.
 
 ---
 
@@ -85,12 +85,12 @@ At the current write rate, the design projected roughly 5x of additional snapsho
 
 The migration had to be invisible at the edges:
 
-| Constraint          | Meaning                                               |
-| ------------------- | ----------------------------------------------------- |
-| Same UI             | no component changes                                  |
-| Same GraphQL        | byte-identical schema file **!!**                     |
-| Same document bytes | report checksums unchanged                            |
-| Same visible data   | opaque ids and transient recalculation state excepted |
+| Constraint          | Meaning                                                    |
+| ------------------- | ---------------------------------------------------------- |
+| Same UI             | no component changes                                       |
+| Same GraphQL        | byte-identical schema file **!!**                          |
+| Same document bytes | report checksums unchanged                                 |
+| Same visible data   | with opaque ids and transient recalculation state excepted |
 
 ---
 
@@ -147,7 +147,7 @@ Three things this pattern does *not* require — and that we deliberately did no
 
 The event is appended **inside the same transaction** as the row it describes, so there is no dual-write window. The dispatcher's poller owns delivery after commit; an inline wake-up is only a latency hint and is allowed to fail without affecting the write.
 
-The price is eventual consistency: a projection may lag the log. That is acceptable only where the screen has a defined staleness budget. Here, the grid, report generation and locked marksheet reads all read current state and never lag; the history drawer may lag by one consumer batch.
+The price is eventual consistency: a projection may lag the log. That is acceptable only where the screen has a defined staleness budget. Here, the grid, report generation and locked marksheet paths all read current state and never lag; the history drawer may lag by one consumer batch.
 
 ---
 
@@ -165,7 +165,7 @@ Before any code, we wrote down what "correct" meant. Everything after that was a
 
 ### Seams
 
-In "Working effectively with Legacy Code", Michael Feathers describes seams, that's what we picked.
+In *Working Effectively with Legacy Code*, Michael Feathers describes seams; that is what we picked.
 
 The tempting move was to event-source the domain: make events the write model, derive everything from them, and let the submissions table become a projection too. That would have been more elegant and much more expensive — every write path, every migration, every report input, and the entire blast radius of the domain.
 We chose a narrower seam:
@@ -208,7 +208,7 @@ That last one matters more than it sounds. The ability to rebuild from the log i
 
 ## Execution
 
-The migration was sequenced so that no phase required the previous one to be reversible.
+The migration was sequenced so that no phase required rolling back the previous one.
 
 ```text
 PHASE 1   emit events beside the write
@@ -268,13 +268,13 @@ The old system identified a locked term by the copy it was generated against. Th
 ## The night it ran
 
 ```text
-18:05   backfill starts, in the first pod of the new rollout
-19:14   the last snapshot is ever written
+18:05   backfill starts in the first pod of the new rollout
+19:14   the last snapshot is written
 19:50   the backfill and the generation stamp both commit
 20:51   the replay reaches the head
 ```
 
-It was a nerve wracking time for me at least. I sat there, watching migrations apply and the cursor move.
+It was a nerve-racking time, at least for me. I sat there, watching migrations apply and the cursor move.
 
 ---
 
